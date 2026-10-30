@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}About - AI Summarizer{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <h2 class="text-navy mb-4"><i class="fas fa-info-circle me-2"></i>About The Project</h2>
+            
+            <div class="card shadow border-0 mb-4">
+                <div class="card-header bg-navy text-white">
+                    <h5 class="mb-0">Project Overview</h5>
+                </div>
+                <div class="card-body">
+                    <p>AI-Based Text Summarization System using Transformer-based Natural Language Processing is an advanced MCA final-year project that provides intelligent document summarization capabilities.</p>
+                    <p>The system converts lengthy documents into concise, coherent, and meaningful summaries while preserving essential information using both extractive and abstractive techniques.</p>
+                </div>
+            </div>
+            
+            <div class="card shadow border-0 mb-4">
+                <div class="card-header bg-navy text-white">
+                    <h5 class="mb-0">Methodology</h5>
+                </div>
+                <div class="card-body">
+                    <h6 class="text-violet">1. Extractive Summarization (TextRank)</h6>
+                    <p>Uses graph-based ranking algorithm where sentences are treated as nodes and similarity scores as edges. PageRank algorithm ranks sentences to extract most important ones.</p>
+                    
+                    <h6 class="text-violet mt-3">2. Abstractive Summarization (BART Transformer)</h6>
+                    <p>Uses pre-trained Bidirectional and Auto-Regressive Transformers (BART) model from Hugging Face to generate paraphrased, human-like summaries by understanding context.</p>
+                    
+                    <h6 class="text-violet mt-3">3. Document Processing</h6>
+                    <p>Supports PDF (PyMuPDF), DOCX (python-docx), TXT files, and web article extraction using BeautifulSoup with security measures.</p>
+                </div>
+            </div>
+            
+            <div class="card shadow border-0 mb-4">
+                <div class="card-header bg-navy text-white">
+                    <h5 class="mb-0">Technology Stack</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Frontend</h6>
+                            <ul>
+                                <li>HTML5, CSS3, JavaScript</li>
+                                <li>Bootstrap 5</li>
+                                <li>Chart.js</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Backend & AI</h6>
+                            <ul>
+                                <li>Python, Flask</li>
+                                <li>Hugging Face Transformers, PyTorch</li>
+                                <li>NLTK, scikit-learn, NetworkX</li>
+                                <li>SQLite, SQLAlchemy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

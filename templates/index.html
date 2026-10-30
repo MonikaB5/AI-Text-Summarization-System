@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container text-center py-5">
+        <h1 class="display-4 fw-bold text-white mb-4">
+            <i class="fas fa-brain me-3"></i>AI-Based Text Summarization System
+        </h1>
+        <p class="lead text-white mb-4">
+            Transform lengthy documents into concise, coherent summaries using Transformer-based NLP
+        </p>
+        <div class="row mt-5">
+            <div class="col-md-4 mb-3">
+                <div class="feature-card">
+                    <i class="fas fa-cut feature-icon"></i>
+                    <h5>Extractive Summarization</h5>
+                    <p>TextRank algorithm for sentence ranking</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="feature-card">
+                    <i class="fas fa-robot feature-icon"></i>
+                    <h5>Abstractive Summarization</h5>
+                    <p>BART Transformer for AI-generated summaries</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="feature-card">
+                    <i class="fas fa-file-alt feature-icon"></i>
+                    <h5>Multi-Format Support</h5>
+                    <p>PDF, DOCX, TXT, and URL extraction</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            {% if session.user_id %}
+            <a href="{{ url_for('summarize_page') }}" class="btn btn-violet btn-lg me-3">
+                <i class="fas fa-magic me-2"></i>Start Summarizing
+            </a>
+            <a href="{{ url_for('dashboard') }}" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+            </a>
+            {% else %}
+            <a href="{{ url_for('auth.register') }}" class="btn btn-violet btn-lg me-3">
+                <i class="fas fa-user-plus me-2"></i>Get Started
+            </a>
+            <a href="{{ url_for('auth.login') }}" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-sign-in-alt me-2"></i>Login
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
