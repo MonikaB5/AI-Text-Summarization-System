@@ -1,7 +1,13 @@
 # AI-Based Text Summarization System
 
+## Live Demo
+https://ai-text-summarizer-9871.onrender.com
+
 ## Project Overview
 An advanced web application for intelligent document summarization using both extractive (TextRank) and abstractive (BART Transformer) techniques.
+
+## Deployment
+Deployed on Render as a Python web service (see `render.yaml`). The free tier has 512 MB RAM and ephemeral disk, so extractive summarization works reliably while the abstractive BART model needs a paid instance with more memory. Data in SQLite is reset on redeploy.
 
 ## Features
 - **Extractive Summarization**: TextRank algorithm for sentence ranking
